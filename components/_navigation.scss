@@ -1,0 +1,164 @@
+
+@media screen and (min-width:851px){
+	.nav-menu {
+		padding-top:10px;
+	}
+	.nav-menu-small div {
+		display: none;
+	}
+
+	.nav-search {
+		@include span-columns(4);
+	}
+
+	.nav-search div {
+		margin-top:20px;
+	}
+
+	.nav-search input {
+		float: right;
+	}
+
+	.nav-logo {
+		padding-left:2em;
+		@include span-columns(8);
+	}
+
+	.dynamic-header {
+		margin-top:40px;
+	}
+
+	.static-header {
+		padding-bottom:10px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+
+	.nav-search {
+		@include span-columns(12);
+		text-align: center;
+	}
+
+	.nav-search input {
+		width:80%;
+		max-width: 300px;
+		display: inline-block;
+		margin-top:-30px;
+		margin-bottom: 20px;
+	}
+
+	.nav-menu-small {
+		display: block;
+		@include linear-gradient(to top, $primary-color, $primary-color-light);
+	}
+
+	.nav-menu-small:hover {
+		@include linear-gradient(to top, $primary-color-light, lighten($primary-color, 20%));
+	}
+
+	.nav-menu div{
+		display: none;
+	}
+
+	.nav-logo {
+		@include span-columns(12);
+	}
+
+	.nav-logo > div h1 {
+		margin: 0px;
+		line-height: 100px;
+		font-size:2em;
+		text-align: center;
+	}
+
+	.dynamic-header {
+		margin-top:0px;
+	}
+
+}
+
+
+
+.static-header {
+	color:$primary-font-color;
+	@include outer-container(100%);
+
+}
+
+.static-header > div {
+	@include linear-gradient(to top, lighten($primary-color, 5%),$primary-color-light);
+}
+
+
+.nav-logo{
+	@include omega;
+	line-height:45px;
+}
+
+.nav-logo h1 {
+	text-shadow:1px 1px 1px darken($primary-contrast-color,40%);
+}
+
+.nav-menu-small{
+	@include span-columns(12);
+}
+
+.nav-menu-small div {
+	border-top:1px solid lighten($primary-color,30%);
+	height:60px;
+	font-size:1.7em;
+	line-height:60px;
+	padding-left:5%;
+}
+
+
+
+.nav-menu{
+	@include span-columns(12);
+	@include omega;
+
+	> div ul {
+		margin: 0;
+		padding:0;
+		list-style-type: none;
+		height: 20px;
+		text-align: center;
+	}
+
+	> div ul li {
+		float:left;
+		height: inherit;
+		@include padding(0 10px 0 10px);
+		font-size: 1.2em;
+  		line-height: 20px;
+  		margin-right:20px;
+  		margin-left:20px;
+	}
+
+	> div ul li:nth-child(4) {
+		border-right:none;
+		margin-right:0px;
+	}
+
+	> div ul li:hover {
+		text-shadow: 0 0 1px $primary-contrast-color;
+		color: $link-highlight-color;
+	}
+}
+
+.nav-search {
+	@include omega;
+}
+
+.nav-search input {
+	color:$primary-font-color;
+	@include border-top-radius(5px);
+	@include border-bottom-radius(5px);
+	padding:5px;
+	background-color:lighten($primary-color,20%);
+	border:1px solid darken($primary-contrast-color,70%);
+}
+
+
+
